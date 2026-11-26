@@ -1,0 +1,258 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,
+            urlcolor=NavyBlue,
+            linkcolor=NavyBlue,
+            citecolor=NavyBlue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% \setlength{\headwidth}{\textwidth}
+\setlength{\headwidth}{0.86\paperwidth}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{2pt}
+\setlength{\footskip}{0pt}
+
+\geometry{left=1.0cm, top=0.8cm, right=1.0cm, bottom=0.6cm, includehead}
+
+\renewcommand{\normalsize}{\fontsize{9.8}{11.6}\selectfont}
+\renewcommand{\small}{\fontsize{9}{10.6}\selectfont}
+\urlstyle{same}
+\raggedright
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.3mm}\item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r@{}}
+        \textbf{#1}\hspace{0.3mm}#2 &
+        \textit{\footnotesize{#3}}
+    \end{tabular*}%
+    \vspace{-2mm}\ignorespaces
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.3mm}\item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r@{}}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}%
+    \vspace{-2.4mm}\ignorespaces
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.3mm}\item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r@{}}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}%
+    \vspace{-2.4mm}\ignorespaces
+}
+
+\newcommand{\resumeRow}[3]{
+\vspace{0.3mm}\item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r@{}}
+        \textbf{#1}#2 & \textit{\footnotesize{#3}}
+    \end{tabular*}%
+    \vspace{-2.4mm}\ignorespaces
+}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{0mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{%
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1)
+                --++ (-0, 1.2)
+                --++ (0.6, 0)
+                --++ (0, -0.6)
+                --++ (0.6, 0)
+                --++ (0, -1);
+            \path[draw,
+                line width = 0.5,
+                rounded corners=0.5]
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5)
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1)
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+\fancyhead[R]{\fontfamily{cmr}\selectfont\footnotesize\textcolor{gray}{Last updated: Nov 25, 2026}}
+\newcommand{\name}{Pharuj (Mai) Rajborirug}
+\newcommand{\emaila}{mai.rajborirug@gmail.com}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+\parbox{\dimexpr\linewidth\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\huge \name} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}}\\
+  {Ph.D. candidate at CMKL University, supervised by} & \href{https://github.com/MaiRajborirug}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {MaiRajborirug}}\\
+  {Asst. Prof. \href{https://sgulyano.github.io/}{Sarun Gulyanon} and Assoc. Prof. \href{https://engineering.cmu.edu/thailand/directory/bios/tungjitkusolmun-supan.html}{Supan Tungjitkusolmun.}} & \href{https://www.linkedin.com/in/pharuj-rajborirug/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}}\  \href{https://scholar.google.com/citations?user=evQ86fwAAAAJ\&hl=en\&oi=ao}{\raisebox{0.0\height}{\footnotesize \faGraduationCap}} Pharuj Rajborirug\\
+  {My work includes 3D generative model, statistics, and LLM in medical field.} & \\
+\end{tabularx}
+}
+
+\vspace{-3.5mm}
+
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeRow
+      {CMKL University}{, \textit{Ph.D. in Artificial Intelligence \& Computer Engineering (AiCE)}}{2025-2028 (Expected)}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+      \item  \textbf{Research}: Developing a robust MRI-to-CT generative model using rectified flow.
+      \resumeItemListEnd
+      \vspace{-1.5mm}
+    \resumeRow
+      {Carnegie Mellon University}{, \textit{M.S. in Electrical and Computer Engineering (ECE)}}{2022-2024}
+      \vspace{-1.5mm}
+      \resumeItemListStart
+      \item  \textbf{Research}: Vision-based control and safety constraints for autonomous ground-robot navigation.
+      \resumeItemListEnd
+      \vspace{-1.5mm}
+    \resumeRow
+      {Johns Hopkins University}{, \textit{M.S. in Biomedical Engineering}}{2019-2021}
+    \resumeRow
+      {University of California, Santa Barbara}{, \textit{B.S. in Physics, College of Creative Studies (High Honors)}}{2015-2019}
+  \resumeSubHeadingListEnd
+\vspace{-4mm}
+
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeRow
+      {Faculty of Medicine, KMITL}{, \textit{Scientist}}{\quad 2021-Present}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {Lectures in programming (Python), Physics, and Machine Learning}
+    \item {Received three innovation grants $\sim 220,000$ Baht}
+    \item {Systems administrator for a computing center for medical students.}
+    \resumeItemListEnd
+
+    \vspace{-3.0mm}
+    \resumeRow
+      {Ravis Technology}{, \textit{Technical Lead} (part-time)}{\quad 2026-Present}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {Building a web service that helps clients apply to the Thai FDA: payment, scheduling with in-house regulatory affairs staff}
+    \item {Matches application details with related, hard-to-search legal documents}
+    \item {Current: medical-device risk classification using GraphRAG over legal documents}
+    \item {Next: flag missing documents, prepare submission-ready applications, expand to drugs, food, and cosmetics}
+    \resumeItemListEnd
+
+    \vspace{-3.0mm}
+    \resumeRow
+      {Edsy}{, \textit{Machine Learning Researcher} (part-time)}{\quad 2024-2026}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {Developing features for Edsy AI Coach, an application that assists English-as-a-second-language (ESL) learners.}
+    \begin{itemize}[noitemsep,topsep=0pt]
+        \item Redesigning an auto-grading Pub/Sub pipeline in Google Cloud Platform (GCP) guarantee grading success.
+        \item Improved LLM grammar grading-speed using asynchronous thread and validity using voting system.
+    \end{itemize}
+    \resumeItemListEnd
+
+    \vspace{-3.0mm}
+    \resumeRow
+      {Meticuly}{, \textit{AI Engineer Intern}}{\quad 2021}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {Developed a 3D bone-segmentation model to help design personalized prosthetic bone implants.}
+    \resumeItemListEnd
+
+    \vspace{-3.0mm}
+    \resumeRow
+      {Massachusetts General Hospital}{, \textit{Research Assistant Intern, Sara Lazar Lab} \href{https://sara-lazar.mgh.harvard.edu/}{\ExternalLink}}{\quad 2018}
+      \vspace{-1.0mm}
+      \resumeItemListStart
+    \item {Analyzed psychological assessment data (e.g., Perceived Stress Scale, Mindful Attention Awareness Scale) from elderly participants enrolled in a stress-reduction meditation program.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Publications}}
+\begin{enumerate}[leftmargin=*,itemsep=0pt,topsep=0pt,parsep=0pt]\small
+\item {sCTFlow: 3D MRI-to-sCT with Conditional Rectified Flow (JCSSE 2026) \href{https://ieeexplore.ieee.org/abstract/document/11596689/}{\footnotesize\faFile[regular]}\\
+\textbf{P. Rajborirug}, S. Tungjitkusolmun, S. Gulyanon$^*$
+}
+\item {When and for Whom Can 72-Hour Emergency Department Return Visits Be Predicted? Development and Temporal Validation of Triage-Time Machine Learning Models (JACEP Open 2026, accepted)\\
+\textbf{P. Rajborirug}, et.al. 
+% N. Kijpaisalratana$^*$
+}
+\item {Safe Driving in Occluded Environments (IEEE T-ITS 2026, accepted)\\
+Z. Wang, T. Jia, \textbf{P. Rajborirug}, N. Ramesh, H. Okuda, T. Suzuki, S. Kar, Y. Nakahira$^*$
+}
+\item {Sugarcane Leaf-derived Cellulose Nanofibrils/Gold Nanoclusters Transparent Nanocomposite Films as Dual-function Sensing Platform for Smartphone assisted- and Front-Face Fluorescence Determination of Hydrogen Sulfide in Waters (TALANTA, under review)\\
+S. Thongchan, J. Suksiriworapong, I. Jangchud, \textbf{P. Rajborirug}, N. Sojic, N. Choengchan$^*$
+}
+\item {Optimizing colorectal polyp detection and localization: Impact of RGB color adjustment on CNN performance (MethodsX 2025) \href{https://www.sciencedirect.com/science/article/pii/S2215016125000354}{\footnotesize\faFile[regular]}\\
+J. Jamrasnarodom$^*$, \textbf{P. Rajborirug}, P. Pisespongsa, K. Pasupa }
+\item {Immune-Inflammatory Checkpoint Pathways Driving Cervical Precancer Progression -- A Transcriptomic Analysis (KSGO 2026) \href{https://canva.link/u054tccwa9xr8ms}{\footnotesize\faFile[regular]}\\
+T. Thanupran, T. Thirakul, P. Tabtimtes, T. Anu-ekjitp, \textbf{P. Rajborirug}, R. Srisuttee, P. Hannanta-anan \textit{(Poster)}}
+\end{enumerate}
+\vspace{-4mm}
+
+\section{\textbf{Selected Projects}}
+\resumeSubHeadingListStart
+    \resumeProject
+      {Mega Man X4 for macOS
+      \href{https://github.com/MaiRajborirug/MegaManOnMac}{\footnotesize\faGithub}}
+      {Made my favourite childhood game playable on Mac; added a \texttt{.dmg} build and in-game key remapping (C/C++).}{2026}{}
+    \resumeProject
+      {AI Screening for Systemic Lupus Erythematosus (SLE) \href{https://projsle-en4e9d6kiwyvx2cpq4xpxs.streamlit.app/}{\ExternalLink}\ \href{https://github.com/MaiRajborirug/proj_sle/tree/master}{\footnotesize\faGithub}}
+      {Launched a web application for low-cost SLE screening without reliance on expensive gold-standard laboratory tests.}{2026}{}
+    \resumeProject
+      {Scikit-learn Anomaly Detection Benchmark Example
+      \href{https://github.com/scikit-learn/scikit-learn/pull/16606}{\footnotesize\faGithub}}
+      {Created and merged an anomaly-detection benchmark example into the official scikit-learn documentation.}
+      {2022}{}
+  \resumeSubHeadingListEnd
+\vspace{-4mm}
+
+\section{\textbf{Teaching Experience \& Achievements}}
+\begin{itemize}[leftmargin=2.4ex,labelsep=0.9ex,itemsep=1pt,topsep=0pt,parsep=0pt]\small
+\item \textbf{King Mongkut's Institute of Technology Ladkrabang}
+% , \textit{Instructor}
+: 17616022 Applied Physics \& Math for Health Sciences; 96642202 AI \& Digital Tech. in Health Science; 17687016 Advanced AI for Biomedical Research; 17017002 Basic Programming
+\item \textbf{Carnegie Mellon University}, \textit{Teaching Assistant}
+: 18-771 Linear Systems
+\item \textbf{CMKL University}, \textit{Teaching Assistant}
+: 41-685 Computer Vision
+\item \textbf{University of California, Santa Barbara}, \textit{Grader}
+: PHYS CS 31--36 Undergraduate Physics
+\item \textbf{Achievement}: Physics Olympic IPST full scholarships (2014)
+\end{itemize}
+
+\end{document}
+

@@ -1,0 +1,9 @@
+build/
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+.DS_Store
+asset/MRI2CT.gif
+asset/*.mkv
